@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root 'home#phone'
 
+  resources :home
+
   # post "/messages/:id" => "posts#create"
 
   # The priority is based upon order of creation: first created -> highest priority.

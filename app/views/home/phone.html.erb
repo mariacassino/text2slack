@@ -1,3 +1,10 @@
-Hello Slack(er)!
 <br><br>
-Enter your phone number to send texts to your fave Slack channels:
+
+  <% if @user %>
+    <%= "Hello Slack(er)!" %>
+    <%= "Enter your phone number to send texts to your fave Slack channels:" %>
+    <%= bootstrap_form_for @user, url: "/home/1", method: "patch" do |f| %>
+    <%= f.text_field :phone %>
+    <%= f.submit "Submit" %>
+    <% end %>
+  <% end %>

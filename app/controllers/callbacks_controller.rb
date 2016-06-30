@@ -12,7 +12,7 @@ class CallbacksController < Devise::OmniauthCallbacksController
         #   # u.twilio_data = data.to_h.to_json
         # end
         #
-        # sign_in @user
+        sign_in @user
         redirect_to "/", notice: "Signed in with Slack"
       end
 

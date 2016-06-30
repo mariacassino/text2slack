@@ -4,6 +4,7 @@
 <head>
   <link rel = "stylesheet" href = "/style.css">
 
+
   <title>Text2Slack</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -23,6 +24,9 @@
 </div>
 </div>
 
+<div class="container">
+<%= flash_messages %>
+</div>
 
 <%= yield %>
 
