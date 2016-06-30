@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
 
-def number 
+def phone
+  @user = current_user
 end
 
 end
