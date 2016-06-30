@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "figaro"
 gem 'omniauth'
 gem 'omniauth-slack', '~> 2.3'
 gem 'twilio-ruby'
