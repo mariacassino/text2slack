@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :home
 
+  post 'twilio/sms' => 'twilio#sms'
+
   # post "/messages/:id" => "posts#create"
 
   # The priority is based upon order of creation: first created -> highest priority.
