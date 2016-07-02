@@ -19,9 +19,6 @@ class User < ActiveRecord::Base
              end
          end
 
-  # twilio_token = Twilio::Util::AccessToken.new ACCOUNT_SID, API_KEY_SID, API_KEY_SECRET,
-  #   ttl=3600,
-  #   identity='example-user'
 
 
 end

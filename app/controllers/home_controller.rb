@@ -7,7 +7,7 @@ end
 
 def update
   @user = current_user
-  if @user.update(approved_params)
+  if @user.update(phone: "+1#{params["user"]["phone"]}")
     flash[:success] = "phone number updated"
     redirect_to "/"
   end
