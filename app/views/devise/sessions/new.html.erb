@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-body {
-    background-color: #CBF6FF;
-}
-</style>
-</head>
-<body>
-
-
-
+  <head>
+    <style>
+        body {
+            background-color: #CBF6FF;
+            }
+    </style>
+  </head>
+  <body>
 
   <center><h1>Text2Slack</h1></center>
-<br><br>
 
+  <br>
+  <br>
 
-<center><%- if devise_mapping.omniauthable? %>
+  <center><%- if devise_mapping.omniauthable? %>
     <a href="<%= user_slack_omniauth_authorize_path %>"><img alt="Sign in with Slack" height="40" width="172" src="https://platform.slack-edge.com/img/sign_in_with_slack.png" srcset="https://platform.slack-edge.com/img/sign_in_with_slack.png 1x, https://platform.slack-edge.com/img/sign_in_with_slack@2x.png 2x" /></a>
-<% end -%></center>
+    <% end -%></center>
 
-</body>
+  </body>
 </html>

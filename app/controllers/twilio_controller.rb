@@ -10,7 +10,6 @@ class TwilioController < ApplicationController
 
 
     def sms
-
       @user = User.find_by(phone: "#{params[:From]}")
       @token = @user.slack_token
       request = HTTParty.post("https://slack.com/api/chat.postMessage",
