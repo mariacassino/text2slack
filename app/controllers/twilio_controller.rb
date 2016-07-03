@@ -12,12 +12,13 @@ class TwilioController < ApplicationController
     def sms
       @user = User.find_by(phone: "#{params[:From]}")
       @token = @user.slack_token
+      @channel = @user.channel 
       request = HTTParty.post("https://slack.com/api/chat.postMessage",
                 headers: { "Authorization" => @token,
                           "User-Agent" => "Maria"
                           },
                 query:   {token: @token,
-                          channel: "C1MQF2AJK",
+                          channel: @channel,
                           text: "#{params[:Body]}",
                           as_user: true,
                           })
