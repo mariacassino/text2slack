@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
-def phone
+def form 
   @user = current_user
 end
 
