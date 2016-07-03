@@ -11,7 +11,11 @@
     <%= f.text_field :channel, class: "form-control" %>
     <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
     <% end %>
+    <% @token = @user.slack_token %>
+    <%= "Don't remember your Slack Channel ID? Check out" %><br>
+    <a href= "https://slack.com/api/channels.list?<%="#{@token}"%>&pretty=1">this list</a>
   <% end %>
+
 </div>
 </div>
 </div>

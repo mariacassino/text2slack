@@ -5,9 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable,
          :omniauth_providers => [:slack]
 
-         has_many :messages
-
-
 
          def self.from_omniauth(auth)
              where(slack_id: auth.uid).first_or_create do |user|
@@ -18,7 +15,6 @@ class User < ActiveRecord::Base
                user.slack_token = auth.credentials.token
              end
          end
-
-
+         
 
 end
