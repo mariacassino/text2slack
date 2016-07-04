@@ -5,16 +5,15 @@
 
   <% if @user %>
     <%= "Hello Slack-er!" %><br><br>
-    <%= "To begin sending texts to Slack, enter your phone number and 9-digit Slack channel:" %>
+    <%= "To begin sending texts to Slack, enter your phone number, and the name of your Slack channel OR its 9-digit channel ID #. No quotation marks necessary." %>
     <%= bootstrap_form_for @user, url: "/home/1", method: "patch", :html => {:class => "form-horizontal center"} do |f| %>
     <%= f.text_field :phone, class: "form-control" %>
     <%= f.text_field :channel, class: "form-control" %>
+    <%= "Your subscribed Slack channels:" %>
+    <%= @channel_list %><br><br>
     <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
     <% end %>
-    <% @token = @user.slack_token %>
-    <%= "Don't remember your Slack Channel ID? Check out" %><br>
-    <a href= "https://slack.com/api/channels.list?<%="#{@token}"%>&pretty=1">this list</a>
-  <% end %>
+   <% end %>
 
 </div>
 </div>
