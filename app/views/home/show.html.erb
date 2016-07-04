@@ -1,8 +1,23 @@
-<center><h1>Text2Slack</h1></center>
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Text2Slack</title>
+</head>
+
+<body>
+
+<ul class="nav navbar-nav pull-right">
+   <% unless user_signed_in? %>
+     <li><%= link_to "Sign In", new_user_session_path %></li>
+   <% end %>
+ </ul>
+
+</div>
+</div>
+</div>
 
 
-
-<br><br>
 <div class="form-group">
   <div class="col-xs-6 col-sm-offset-3">
     <div class="input-group">
@@ -20,3 +35,6 @@
     </div>
   </div>
 </div>
+
+</body>
+</html>
