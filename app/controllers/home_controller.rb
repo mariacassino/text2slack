@@ -2,7 +2,7 @@ class HomeController < ApplicationController
 
 
 
-def form
+def show
   @user = current_user
   if @user
     all_channels = channels_query["channels"]

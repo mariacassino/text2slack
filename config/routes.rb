@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
 
-
-  root 'home#form'
+  devise_scope :user do
+    root :to => 'devise/sessions#new'
+  end
 
   resources :home
 
+  get 'home/goodbye' => 'home#goodbye'
+  get 'home/form' => 'home#form'
   post 'twilio/sms' => 'twilio#sms'
+
+
+  # resources :home [except :index]
 
   # post "/messages/:id" => "posts#create"
 
