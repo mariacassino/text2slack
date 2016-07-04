@@ -2,7 +2,9 @@
 <html>
 
 <head>
-<title>Text2Slack</title>
+  <% if @user %>
+<h1><center>Text2Slack</center></h1>
+<% end %>
 </head>
 
 <body>
@@ -23,7 +25,6 @@
     <div class="input-group">
 
       <% if @user %>
-        <%= "Hello Slack-er!" %><br><br>
         <%= "To begin sending texts to Slack, enter your phone number (beginning with +1) and choose your channel:" %>
         <%= bootstrap_form_for @user, url: "/home/1", method: "patch", :html => {:class => "form-horizontal center"} do |f| %>
           <%= f.text_field :phone, class: "form-control" %>
