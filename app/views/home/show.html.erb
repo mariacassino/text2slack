@@ -5,7 +5,7 @@
 
       <% if @user %>
         <%= "Hello Slack-er!" %><br><br>
-        <%= "To begin sending texts to Slack, enter your phone number and choose your channel:" %>
+        <%= "To begin sending texts to Slack, enter your phone number (beginning with +1) and choose your channel:" %>
         <%= bootstrap_form_for @user, url: "/home/1", method: "patch", :html => {:class => "form-horizontal center"} do |f| %>
           <%= f.text_field :phone, class: "form-control" %>
           <%= f.collection_select :channel, @channel_list, :to_s, :to_s%>

@@ -24,7 +24,7 @@ class HomeController < ApplicationController
 
     def update
       @user = current_user
-      if @user.update(phone: "+1#{params["user"]["phone"]}", channel: "#{params["user"]["channel"]}")
+      if @user.update(phone: "#{params["user"]["phone"]}", channel: "#{params["user"]["channel"]}")
         flash[:success] = "Success! You may now send messages to your Slack channel via SMS by texting (954) 280-1616"
         redirect_to "/home/form"
 
