@@ -8,12 +8,13 @@
     <%= "To begin sending texts to Slack, enter your phone number, and the name of your Slack channel OR its 9-digit channel ID #. No quotation marks necessary." %>
     <%= bootstrap_form_for @user, url: "/home/1", method: "patch", :html => {:class => "form-horizontal center"} do |f| %>
     <%= f.text_field :phone, class: "form-control" %>
-    <%= f.text_field :channel, class: "form-control" %>
-    <%= "Your subscribed Slack channels:" %>
-    <%= @channel_list %><br><br>
+    <%= f.collection_select :channel, @channel_list, :to_s, :to_s,
+    :include_blank => true %>
     <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
     <% end %>
    <% end %>
+
+
 
 </div>
 </div>
