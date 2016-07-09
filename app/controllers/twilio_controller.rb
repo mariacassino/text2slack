@@ -1,7 +1,7 @@
 require 'twilio-ruby'
 
 class TwilioController < ApplicationController
-  include Webhookable
+  # include Webhookable
 
   after_filter :set_header
   skip_before_action :verify_authenticity_token
@@ -20,6 +20,8 @@ class TwilioController < ApplicationController
                 text: "#{params[:Body]}",
                 as_user: true,
                 })
+                head :ok
+
   end
 
 end

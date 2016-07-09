@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <% if @user %>
 <h1><center>Text2Slack</center></h1>
 <% end %>
 </head>
 
-<body>
 
+
+<body>
 <ul class="nav navbar-nav pull-right">
    <% unless user_signed_in? %>
      <li><%= link_to "Sign In", new_user_session_path %></li>
