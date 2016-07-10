@@ -1,9 +1,5 @@
 class UserController < ApplicationController
 
-  # def profile
-  #   @user = current_user
-  # end
-
 
   def channels_query
     @user = current_user
@@ -24,11 +20,6 @@ class UserController < ApplicationController
         @channel_list = all_channels.map{|x| x["name"]}
       end
     end
-
-
-
-
-
 
 
 end
