@@ -20,6 +20,7 @@ gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form'
 gem 'quiet_assets'
 gem 'puma'
+gem 'rails_12factor'
 
 
 group :development do
