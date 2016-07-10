@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable,
          :omniauth_providers => [:slack]
@@ -15,6 +14,6 @@ class User < ActiveRecord::Base
                user.slack_token = auth.credentials.token
              end
          end
-         
+
 
 end
