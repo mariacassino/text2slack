@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <% if @user %>
-<h1><center>Text2Slack</center></h1>
-<% end %>
-</head>
+  <head>
+    <% if @user %>
+    <h1><center>Let's Get Started:</center></h1>
+    <% end %>
+  </head>
 
-
-
-<body>
-<ul class="nav navbar-nav pull-right">
-   <% unless user_signed_in? %>
-     <li><%= link_to "Sign In", new_user_session_path %></li>
-   <% end %>
- </ul>
+  <body>
 
 </div>
 </div>
-</div>
 
 
-<div class="form-group">
-  <div class="col-xs-6 col-sm-offset-3">
-    <div class="input-group">
+    <div class="form-group">
+      <div class="col-xs-6 col-sm-offset-3">
+        <div class="input-group">
 
-      <% if @user %>
-        <%= "To begin sending texts to Slack, enter your phone number (beginning with +1) and choose your channel:" %>
-        <%= bootstrap_form_for @user, url: "/home/1", method: "patch", :html => {:class => "form-horizontal center"} do |f| %>
+          <% if @user %>
+          <%= "To begin sending texts to Slack, enter your phone number (beginning with +1) and choose your channel:" %>
+          <%= bootstrap_form_for @user, url: "/home/1", method: "patch", :html => {:class => "form-horizontal center"} do |f| %>
           <%= f.text_field :phone, class: "form-control" %>
           <%= f.collection_select :channel, @channel_list, :to_s, :to_s%>
           <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
-        <% end %>
-      <% end %>
+          <% end %>
+          <% end %>
 
+
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-</body>
+  </body>
+
 </html>
