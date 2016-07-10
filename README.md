@@ -1,4 +1,4 @@
-{<img src="https://codeclimate.com/github/mariacassino/text2slack/badges/gpa.svg" />}[https://codeclimate.com/github/mariacassino/text2slack]
+[![Code Climate](https://codeclimate.com/github/mariacassino/text2slack/badges/gpa.svg)](https://codeclimate.com/github/mariacassino/text2slack)
 
 <b>TEXT2SLACK</b>
 
