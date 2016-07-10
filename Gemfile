@@ -19,6 +19,7 @@ gem 'pundit'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap_form'
 gem 'quiet_assets'
+gem 'puma'
 
 
 group :development do
