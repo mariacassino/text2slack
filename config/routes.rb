@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     root :to => 'devise/sessions#new'
   end
 
+  get 'user/profile' => 'user#profile'
+
   resources :home
 
   get 'home/goodbye' => 'home#goodbye'

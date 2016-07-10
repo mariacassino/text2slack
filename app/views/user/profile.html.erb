@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>Text2Slack Profile</h1>
+  <h2 class="tagline"><%=@user.email.split('@').first%></h2>
+</div>
+
+
+<div class="container">
+  <div class="main">
+
+  </div><!-- .main -->
+
+  <div class="sidebar">
+    <div class="widget">
+      <img src="https://www.gravatar.com/avatar/<%= Digest::MD5.hexdigest(current_user.email) %>" alt="Profile Picture" width="150">
+      <h3 class="profile">My Slack Groups</h3>
+    </div><!-- .widget -->
+    <div class="clear"></div>
+  </div><!-- .sidebar -->
+
+  <div class="widget" id="boards">
+    <h3>Slack Channels</h3>
+    <ul>
+    <%= @channel_list %>
+    <ul>
+  </div>
+  <div class="clear"></div>
+
+
+
+  <div class="widget" id="points">
+    <h3>My Links: </h3>
+  </div>
+  <div class="clear"></div>
+
+
+
+</div><!-- .container -->
