@@ -1,14 +1,13 @@
 require 'twilio-ruby'
 
 class TwilioController < ApplicationController
-  # include Webhookable
 
   after_filter :set_header
   skip_before_action :verify_authenticity_token
 
 
   def sms
-    @user = User.find_by(phone: "#{params[:From]}")
+    @user = User.find_by(phone: params[:From])
     @token = @user.slack_token
     @channel = @user.channel
     request = HTTParty.post("https://slack.com/api/chat.postMessage",
@@ -17,10 +16,12 @@ class TwilioController < ApplicationController
                 },
       query:   {token: @token,
                 channel: @channel,
-                text: "#{params[:Body]}",
+                text: params[:Body],
                 as_user: true,
                 })
                 head :ok
+
+                #still 500 server error
 
   end
 
