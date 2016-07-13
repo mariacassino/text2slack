@@ -2,7 +2,6 @@ require 'twilio-ruby'
 
 class TwilioController < ApplicationController
 
-  after_filter :set_header
   skip_before_action :verify_authenticity_token
 
 
@@ -19,6 +18,7 @@ class TwilioController < ApplicationController
                 text: params[:Body],
                 as_user: true,
                 })
+                puts request 
                 head :ok
 
                 #still 500 server error
