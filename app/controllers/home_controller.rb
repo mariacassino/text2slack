@@ -1,10 +1,5 @@
 class HomeController < ApplicationController
 
-  # def user
-  #   @user = current_user
-  # end
-
- # why does home/form not display the form unless current_user is defined in each method??
 
   def channels_query
     @user = current_user
