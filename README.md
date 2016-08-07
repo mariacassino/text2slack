@@ -13,5 +13,3 @@ Allows Slack team members to send messages to any channel in that team via SMS.
 * a message will flash indicating that you successfully saved your phone number, and that you may now begin sending SMS messages from your phone to your Slack channel by texting (954) 280-1616
 
 ![screen shot 2016-07-10 at 11 59 46 am](https://cloud.githubusercontent.com/assets/15970171/16714639/befe6904-4697-11e6-9d98-bc654f639798.png)
-
-https://text2slack.herokuapp.com/
