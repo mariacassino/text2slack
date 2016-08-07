@@ -17,14 +17,13 @@
         <div class="input-group">
 
           <% if @user %>
-          <%= "To begin sending texts to Slack, enter your phone number (beginning with +1) and choose your channel:" %>
+          <p>"To begin sending texts to Slack, enter your phone number (beginning with +1) and choose your channel:" </p>
           <%= bootstrap_form_for @user, url: "/home/1", method: "patch", :html => {:class => "form-horizontal center"} do |f| %>
           <%= f.text_field :phone, class: "form-control" %>
           <%= f.collection_select :channel, @channel_list, :to_s, :to_s%>
           <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
           <% end %>
           <% end %>
-
 
         </div>
       </div>

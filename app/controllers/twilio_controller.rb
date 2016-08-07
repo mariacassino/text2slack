@@ -18,11 +18,8 @@ class TwilioController < ApplicationController
                 text: params[:Body],
                 as_user: true,
                 })
-                puts request 
+                puts request
                 head :ok
-
-                #still 500 server error
-
   end
 
 end

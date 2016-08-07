@@ -28,6 +28,8 @@ class HomeController < ApplicationController
       if @user.update(approved_params)
         flash[:success] = "Success! You may now send messages to your Slack channel via SMS by texting (954) 280-1616"
         redirect_to "/home/form"
+      else
+        flash[:error]
       end
     end
 
