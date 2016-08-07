@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
 
 
-
   def channels_query
     @user = current_user
     if @user
