@@ -1,7 +1,7 @@
 [![Code Climate](https://codeclimate.com/github/mariacassino/text2slack/badges/gpa.svg)](https://codeclimate.com/github/mariacassino/text2slack)
 
 #TEXT2SLACK
-##[Click Here for Live Version](https://text2slack.herokuapp.com/)
+##[View on Heroku](https://text2slack.herokuapp.com/)
 
 Allows anyone who belongs to a Slack team to send messages to any channel in that team via SMS.
 
