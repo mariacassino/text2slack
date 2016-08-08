@@ -15,7 +15,6 @@ class HomeController < ApplicationController
      end
    end
 
-
     def show
       if @user
         all_channels = channels_query["channels"]
@@ -23,17 +22,15 @@ class HomeController < ApplicationController
       end
     end
 
-
     def update
       if @user.update(approved_params)
-        flash[:success] = "Success! You may now send messages to your Slack channel via SMS by texting (954) 280-1616"
+        flash[:success] = "Success! You may now send messages to your Slack
+          channel via SMS by texting (954) 280-1616"
         redirect_to "/home/form"
       else
         flash[:error]
       end
     end
-
-
 
     private
 
